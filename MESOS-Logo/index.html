@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="static/css/foundation.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+		<div class="inner-wrap">
+			
+			<div id="canvas-wrapper" class="drawing">
+				
+				<div class="name-wrapper">
+					<span class="mesos">mesos</span>
+					<span class="name" id="preview">framework</span>
+				</div>
+			</div>
+						
+			<aside id="cp">
+				<h1>Mesos Logo Generator</h1>
+				<form>
+					<input type="text" id="name" placeholder="Type in the framework name"/>
+				</form>
+				<div id="buttons">
+					<ul class="button-group">
+						<li><span class="regenerate icon"></span><button id="go" class="tiny">Regenerate Shape</button></li>
+						<li><span class="save icon"></span><button href="#" id="download" class="button tiny secondary">Save logo design</button></li>
+					</ul>
+				</div>
+			</aside>
+
+		</div>
+	
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script>
+		
+		$(document).ready(function () {
+			
+			// Update framework name
+			var input = $('#name'),
+				preview = $('#preview');
+			
+			input.keyup(function(e) {
+				preview.text(input.val());
+			});	
+		});
+		
+	</script>
+	<script type="text/javascript" src="logo_gen.js"></script>
+</body>
+</html>

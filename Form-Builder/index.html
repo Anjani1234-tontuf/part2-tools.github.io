@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/54731ad5ae.js"></script>
+  <title>HTML Form Builder</title>
+</head>
+<body>
+  <div id="wrapper">
+    <h2>Create your custom Form!</h2>
+    <div class="selected-items">
+      <ul class="selected-items-list">
+        
+      </ul>
+    </div>
+    <form autocomplete="off" class="autocomplete-section">
+      <div class="autocomplete">
+        <input id="myInput" type="text" name="myCountry" placeholder="Enter Field Name">
+      </div>
+      <input type="submit" name="submit" class="add-more">
+    </form>
+    <div class="create-new">
+      <i class="fas fa-plus"></i>
+      <div class="new-form">
+        <form>
+          <input type="text" name="new-option" class="new-option" autocomplete="off">
+          <input type="submit" class="new-option-submit">
+        </form>
+      </div>
+    </div>
+    <div class="proccess-form">
+      <i class="fas fa-tools"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

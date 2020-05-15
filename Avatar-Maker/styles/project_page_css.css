@@ -1,0 +1,243 @@
+@charset "UTF-8";
+
+html {
+	box-sizing: border-box;
+  }
+  *, *:before, *:after {
+	box-sizing: inherit;
+  }
+
+body {
+    font-family: helvetica, "Myriad Pro";
+    font-size:16px;
+    margin:0;
+    background-color: #FCE9DB;
+}
+/* all nav */
+
+@media only screen and (max-width: 800px) {
+
+  .clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+  }
+  
+  .clearfix:after{
+    clear: both;
+  }
+
+  header {
+    margin: 0 1em;
+    padding: 1em; /*use padding to get more space */
+  }
+  
+  nav {
+    width: 200px;
+    position: absolute;
+    left: -200px; /*off the screen to the right by 220px */
+    top: 0;
+    padding-top: 6em;
+    padding-bottom: 4em;
+    text-align: right;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+ .nav {
+   font-size: 1.2em;
+   font-weight: bold;
+   color: #ED3E2A; 
+   text-decoration: none;
+ }
+
+ li {
+   padding-bottom: 1em;
+   border-bottom: 3px solid white;
+ }
+
+ li a:hover {
+  color: #5D5455;
+}
+
+  li:not(:last-child) {
+    margin-bottom: 1em;
+  }
+  
+  /*header layout*/
+  
+  .header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    align-items: center;
+  }
+  
+  
+  .toggleTrigger {
+    cursor:pointer;
+    display: inline;
+    font-size: 1em;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .icon-bar {
+    width: 2em;
+    height: 4px;
+    display: block; /*inline by default */
+    background-color: #ED3E2A;
+  }
+  
+  .icon-bar + .icon-bar { /*all elements after + */
+    margin-top: 5px;
+  }
+
+  #download-btn {
+    color: transparent;
+  }
+  
+  h2 a {
+    cursor:pointer;
+    color: #ED3E2A;
+    text-decoration: none;
+  }
+
+  /*set a width on the nav, position it in right direction so it's off the screen */
+  
+  #page-canvas { /*shift over the canvas to the left */
+    height: 100%;
+  /*   transform: translateX(0); translate x direction */
+    transition: all 0.4s cubic-bezier(0.32, 1.25, 0.375, 1.15); /*takes args: duration, ease-in function https://cubic-bezier.com/#.17,.67,.83,.67 */
+    transform: translateZ(0) translateX(0); /*3d axis */
+  }
+  
+  .show-nav #page-canvas {
+    transform: translateZ(0) translateX(200px); /*220 is the width of nav */
+  }
+}
+
+
+@media only screen and (min-width: 800px) {
+  
+  .clearfix:after{
+    clear: both;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: flex-column;
+    list-style: none;
+    justify-content: center;
+    text-align:center;
+  }
+
+ .nav {
+   font-size: 1.2em;
+   font-weight: bold;
+   color: #ED3E2A; 
+   text-decoration: none;
+   margin-left:20px;
+   margin-right:20px;
+ }
+
+ li a:hover {
+  color: #5D5455;
+}
+  
+  /*header layout*/
+  
+  header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 1em;
+  }
+  
+  .toggleTrigger, #download-btn {
+    display:none;
+}
+
+  h2 a {
+    cursor:pointer;
+    color: #ED3E2A;
+    text-decoration: none;
+  }
+
+}
+
+
+/* project page content */
+
+h2 {
+  color: #ED3E2A;
+  font-size: 22px;
+  font-weight: bold;
+}
+p {
+  color: #5D5455;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  justify-content: center;
+  text-align: center;
+  cursor: auto;
+}
+
+.project {
+  margin: auto;
+  display: grid;
+  width: 300px;
+  grid-template-rows: 150px 150px 150px;
+  grid-gap: 20px;
+  grid-auto-rows: 150px;
+  justify-content: center;
+}
+
+.project div {
+  display:grid;
+  border-radius: 20px;
+  background-color: white;
+  justify-content: center;
+  width: 300px;
+  cursor:pointer;
+}
+
+p {
+  margin: auto;
+}
+
+.proposal {
+  grid-column: auto;
+  grid-row: 1;
+}
+
+.wireframe {
+  grid-column: auto;
+  grid-row: 2;
+}
+
+.uxReport {
+  grid-column: auto;
+  grid-row: 3;
+}
+
+.project {
+  margin-bottom: 4em;
+}
+

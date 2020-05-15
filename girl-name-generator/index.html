@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no" >
+
+	<title>Random Name Generator</title>
+
+	<link rel="stylesheet" href="css/name_generator.css">
+	<link rel="stylesheet" href="css/normalize.css">
+
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<div class="header">
+			<h1>Random Name Generator - Girl</h1>
+		</div>
+
+		<div class="mobileShow">
+			<a href="#" id="mobileLinks"><img src="img/links.png" height="50" alt="hidden links icon"></a>
+			<p>Show Tips &amp; Tricks</p>
+		</div>
+
+		<div class="group info" id="infoSection">
+			<div class="columns info-one">
+				<ul>
+					<li>Click <strong>Generate a Name</strong> to get a random name. If you like one, click <strong>Keep It!</strong>.</li>
+					<li>To go back one name, click <strong>Previous Name</strong>.</li>
+					<li>Click <strong>Remove Last</strong> to clear the <strong>Keep It!</strong> list. </li>
+				</ul>
+			</div>
+			<div class="columns info-two">
+				<ul>
+					<li>To preview full name, click <strong>Preview Full Name</strong>.</li>
+					<li>Update the middle name using <strong>Change Middle Name</strong>.</li>
+					<li>Add a first name, using the <strong>Add First Name</strong> button.</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="group">
+			<div class="columns col-one">
+				<div class="column-header">
+					<button class="topLevel" id="getGirlName">Generate a Name</button>
+					<button class="secondLevel" id="getLastName">Previous name</button>
+				</div>
+				<div id="name">
+					
+				</div>
+			</div>
+			<div class="columns col-two">
+				<div class="column-header">
+					<button class="topLevel" id="keepName">Keep It!</button>
+					<button class="secondLevel" id="removeLast">Remove Last</button>
+				</div>
+				<div id="keep"></div>
+			</div>
+		</div>
+
+		<div class="preview">
+			<div class="preview-buttons">
+				<button class="topLevel" id="namePreview">Preview Full Name</button>
+				<button class="topLevel" id="changeMiddleName">Change Middle Name</button>
+			</div>
+			<div class="name-inputs" id="nameInputs">
+				<p id="message"></p>
+				<input type="text" id="lastNameInput" value="" placeholder="last name...">
+				<input type="text" id="middleNameInput" value="" placeholder="middle name...">
+				<input type="button" id="submit" value="ADD">
+			</div>
+			<p id="namePreviewHolder"></p>
+		</div>
+
+		<div class="footer">
+			<p>&copy; Wisp Creek Design - 2014</p>
+		</div>
+	</div>
+
+	<script src="js/name.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Couple Name Generator</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Chivo:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-title">Couple Name <span style="color: #3454D1">Generator</span> </h1>
+        <div class="header-subtitle">Combine Two Names into a Supercouple Nickname</div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="wrapper">
+                <div class="main-block">
+                    <div class="main-col">
+                        <h2 class="main-head">First name</h2>
+                        <form><input class="main-input" value="Enter your name" onfocus="this.value=''">
+    
+                        </form>
+                    </div>
+                    <div class="main-col__bordered">
+                        <h2 class="main-head">Second name</h2>
+                        <form><input class="main-input" value="Enter your name" onfocus="this.value=''">
+    
+                        </form>
+                    </div>
+                    <div class="main-col__btn">
+                        <button class="main-button">Generate</button>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper wrapper__disable">
+                <div class="main-block main-block--active">
+                    <div class="main-active-col">
+                        <h2 class="main-active-head">First name</h2>
+                        <p class="main-active-input">lark, lerk, levk, levrk, lmark, lemark, levark</p>
+                    </div>
+                    <div class="main-active-col">
+                        <h2 class="main-active-head">Second name</h2>
+                        <div class="main-active-input">marv, mlev, malev, marev, markv, markev, marlev</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <img class="footer-img" alt="" src="img/box.png">
+                    <div class="footer-head">Cool Nicknames</div>
+                    <div class="footer-sub">Find best nicknames for any name</div>
+                </div>
+                <div class="footer-col">
+                    <img class="footer-img" alt="" src="img/spruit.png">
+                    <div class="footer-head">Number Generator</div>
+                    <div class="footer-sub">Generate random numbers of any kind</div>
+                </div>
+                <div class="footer-col">
+                    <img class="footer-img" alt="" src="img/home.png">
+                    <div class="footer-head">Username Generator</div>
+                    <div class="footer-sub">Get yourself a unique username</div>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-social">
+                        <a href=#><img class="footer-social-img" src="img/facebook.png" alt=""></a>
+                        <a href=#><img class="footer-social-img" src="img/inst.png" alt=""></a>
+                        <a href=#><img class="footer-social-img" src="img/twi.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+    </footer>
+    <script>
+        const btn = document.querySelector('.main-button');
+        const wrapper = document.querySelectorAll('.wrapper');
+        
+        btn.addEventListener('click', (evt) => {
+        evt.preventDefault();
+        wrapper[1].classList.toggle('wrapper__disable');
+        });
+    </script>
+</body>
+</html>

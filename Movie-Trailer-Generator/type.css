@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,400,500,600,700|Nanum+Gothic+Coding:400,700|Roboto&display=swap');
+
+@font-face {
+    font-family: 'woodcutter VIRUS';
+    src: url('./fonts/woodcuttervirus.woff2') format('woff2'),
+        url('./fonts/woodcuttervirus.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hellvetica';
+    src: url('./fonts/hellvetica.woff2') format('woff2'),
+        url('./fonts/hellvetica.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-hell { font-family: 'Hellvetica'; }
+.font-ibm { font-family: 'IBM Plex Mono', monospace; }
+.font-nanum { font-family: 'Nanum Gothic Coding', monospace; }
+.font-wood { font-family: 'woodcutter VIRUS'; }
+
+/* base type styles */ 
+
+html { font-size: 16px; } 
+
+body {
+  font-weight: 400;
+  line-height: 1.65;
+  color: black;
+  position: relative; 
+}
+
+p { margin-bottom: 1.15rem; }
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  font-family: 'woodcutter VIRUS';
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+h1 { font-size: 3.052em; }
+h2 { font-size: 2.441em; }
+h3 { font-size: 1.953em; }
+h4 { font-size: 1.563em; }
+h5 { font-size: 1.25em; }
+
+h2 { margin-bottom: 40px; }
+h4 { margin-bottom: 24px; }
+
+small, 
+.text_small { font-size: 0.8em; }
+
+button, p, a {
+  font-family: 'IBM Plex Mono', monospace;
+}

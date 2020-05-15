@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Supreme Logo Generator</title>
+		<script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+	</head>
+	
+	<style>
+	@font-face {
+		font-family: fut;
+		src: url(fut.woff);
+	}
+
+	.supreme{
+		font-family: fut;
+		color: white;
+		background: rgb(237, 28, 36);
+		display: inline-block;
+		font-size: 100px;
+		padding-left: 25px;
+		padding-right: 30px;
+		padding-bottom: 5px;
+		font-weight: 100;
+		user-select: none;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+	}
+
+	body{
+		text-align: center;
+		margin: 0;
+		font-family: "Courier New";
+	}
+
+	input{
+		border: 1px solid rgb(237, 28, 36);
+		color: black;
+		font-family: "Courier New";
+		padding: 5px;
+		outline: none;
+	}
+
+	.center{
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	a{
+		color: black;
+	}
+
+	h1{
+		font-weight: 100;
+	}
+	</style>
+	<body onload="sup()">
+		<div class="center">
+			<h1>Supreme Logo Generator</h1>
+			<div class="supreme"></div><br><br>
+			<input type="text" value="Supreme" onkeyup="sup()"><br><br>
+			<a href="" target="_blank">Download</a>
+		</div>
+		<script>
+		
+		function sup(){
+			document.getElementsByClassName('supreme')[0].innerHTML=document.getElementsByTagName("input")[0].value;
+			html2canvas(document.querySelector(".supreme")).then(canvas => {
+				document.getElementsByTagName("a")[0].href = canvas.toDataURL("image/jpeg");
+			});
+		}
+		</script>
+	</body>
+</html>

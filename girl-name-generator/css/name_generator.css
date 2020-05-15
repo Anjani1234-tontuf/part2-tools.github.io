@@ -1,0 +1,312 @@
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+/* ============= MAIN LAYOUT STYLING =============
+*/
+
+html,
+body {
+	height: 100%;
+}
+
+/* ============= MAIN LAYOUT COLORS =============
+*/
+
+body { background-color: #eee; }
+.wrapper { background-color: #ddd; }
+.header { background-color: #124191; }
+.column-header { background-color: #eee; }
+.info { background-color: ; }
+.preview {}
+.footer { background-color: rgb(0, 169, 171);}
+
+.wrapper {
+	width: 65%;
+	margin: 50px auto;
+}
+
+.header {
+	width: 100%;
+	padding: 5px;
+	text-align: center;
+	color: #fff;
+}
+
+.mobileShow {
+	width: 100%;
+	padding: 5px;
+	display: none;
+}
+
+.group ul li {
+	font-family: calibri;
+	font-size: 1.1em;
+}
+
+.info-one {
+	width: 45%;
+}
+
+.info-two {
+	width: 55%;
+}
+
+.columns {
+	float: left;
+	padding: 10px;
+}
+
+.col-one {
+	width: 60%;
+}
+
+.col-two {
+	width: 40%;
+}
+
+.column-header {
+	width: 100%;
+	padding: 20px 10px;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+}
+
+.preview {
+	width: 100%;
+	height: 200px;
+	padding: 5px;
+	text-align: center;
+}
+
+.preview-buttons {
+	margin-top: 50px;
+}
+
+.name-inputs {
+	margin-top: 10px;
+}
+
+.name-inputs input[type=text] {
+	padding: 8px;
+	border-radius: 3px;
+	border: none;
+}
+
+.name-inputs input[type=button] {
+	padding: 9px;
+	border: none;
+	border-radius: 3px;
+	background: red;
+	font-weight: bold;
+	color: #fff;
+}
+
+.footer {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 3px;
+	text-align: center;
+	color: #fff;
+	font-weight: bolder;
+}
+
+/* ============= CLEARFIX for FLOATS =============
+*/
+
+.group:after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+/* ============= BUTTONS =============
+*/
+
+.topLevel,
+.secondLevel {
+	border: none;
+	background: #1080dd;
+	color: #ffff90;
+	padding: 5px;
+	border-radius: 5px;
+	font-weight: bolder;
+	font-size: 1.2em;
+	text-shadow: 0 -1px 0 #000;
+	box-shadow: 0 1px 0 #1080dd, 0 5px 0 #124191, 0 6px 6px rgba(0,0,0,0.6);
+	-webkit-transition: all 150ms ease;
+	transition: all 150ms ease;
+}
+
+.topLevel:hover,
+.secondLevel:hover {
+	background: #1088dd;
+	cursor: pointer;
+}
+
+.topLevel:active,
+.secondLevel:active {
+	color: #fff;
+	box-shadow: 0 1px 0 #666, 0 2px 0 #444, 0 2px 2px rgba(0,0,0,0.9);
+	-webkit-transform: translateY(3px);
+	transform: translateY(3px);
+	-webkit-animation: none;
+	animation: none;
+}
+
+.secondLevel {
+	float: right;
+}
+
+/* ============= APPENDED CONTENT =============
+*/
+
+#keep p {
+	margin-bottom: -10px;
+	margin-right: 10px;
+	padding: 0 10px;
+	font-size: 1.5em;
+	font-family: calibri;
+	text-transform: uppercase;
+	display: inline-block;
+	background: #eee;
+	border-radius: 3px;
+}
+
+#name {
+	font-size: 3em;
+	padding: 20px;
+	font-family: Calibri;
+	color: #124191;
+	font-weight: bolder;
+	margin-left: 100px;
+}
+
+#namePreviewHolder {
+	width: 50%;
+	margin: 0 auto;
+	font-size: 2em;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-weight: bold;
+	color: #fff;
+	text-shadow: 1px 1px 1px #000;
+	box-shadow: 3px 3px 6px #999;
+	background: darkred;
+	border-radius: 15px;
+	margin-top: 25px;
+}
+
+#message {
+	color: darkred;
+	font-style: italic;
+}
+
+.message-image:before {
+	content: url("../img/stop_sm.png");
+	padding-right: 5px;
+}
+
+.hide {
+	display: none;
+}
+
+.mobileShow p {
+	display: inline-block;
+	vertical-align: top;
+	color: #999;
+}
+
+
+/* ============= MEDIA QUERIES =============
+*/
+
+@media screen and (max-width: 1028px) {
+	.topLevel,
+	.secondLevel {
+		font-size: .9em;
+	}
+}
+
+@media screen and (max-width: 875px) {
+	.wrapper {
+		width: 80%;
+	}
+
+	.topLevel,
+	.secondLevel,
+	input {
+		margin-top: 5px;
+		padding: 2px;
+	}
+
+	.column-header {
+		padding: 10px 5px;
+	}
+
+	#name {
+		font-size: 2em;
+		margin-top: 10px;
+		margin-left: 5px; 
+		padding-top: 5px;
+	}
+
+	#namePreviewHolder {
+		font-size: 1em;
+		border-radius: 5px;
+	}
+
+	.preview {
+		height: 250px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.wrapper {
+		width: 100%;
+		margin-top: 0;
+	}
+
+	.footer {
+		font-size: .7em;
+	}
+
+	.mobileShow {
+		display: block;
+	}
+
+	.info-one,
+	.info-two,
+	.col-one,
+	.col-two {
+		display: block;
+		float: initial;
+		width: 100%;
+		margin-top: -20px;
+	}
+
+	.preview {
+		margin-top: -20px;
+	}
+
+	.info {
+		display: none;
+	}
+
+	.show {
+		display: block;
+	}
+
+	.hide {
+		display: none;
+	}
+
+	.header h1 {
+		font-size: 1em;
+	}
+}
+
+

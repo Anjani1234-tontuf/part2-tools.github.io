@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Mooshi</title>
+		<style>
+			body {
+				padding: 0;
+				margin: 0;
+				background: #2f343b;
+				color: #c77966;
+				font-family: Slackey, serif;
+			}
+			h1 {
+				font-size: 9vw;
+				margin: 0;
+				padding: 0;
+				font-weight: bold;
+				letter-spacing: .05em;
+			}
+			.content {
+				text-align: center;
+				margin-top: 20vh;
+			}
+			p {
+				margin-top: 30vh;
+				color: #e3cda4;
+			}
+		</style>
+		<link href="https://fonts.googleapis.com/css?family=Slackey" rel="stylesheet" type="text/css">
+
+	</head>
+	<body>
+		<div class="content">
+			<h1 id="name"></h1>
+			<p>Refresh your page for a new name</p>
+		</div>
+	</body>
+	<script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+	<script>
+		var names = {
+			first: ['moo','shi','shoo','mi','leek','loo','poo','sheek'],
+			join: ['sha','shi','sh','shu','sho']
+		};
+
+		var Name = {
+			random: function() {
+				// first name
+				var first = names.first[Math.floor(Math.random() * names.first.length)];
+
+				// 20% chance that there will be a joiner
+				var joiner = Math.random() > .25;
+
+				// joiner
+				var join = joiner ? names.join[Math.floor(Math.random() * names.join.length)] : '';
+
+				// chance that there will be a last name
+				var laster = joiner ? Math.random() > .25 : true;
+
+				// last name
+				var last = names.first[Math.floor(Math.random() * names.first.length)];
+
+				// make it
+				var name = first + join + (last == first ? '' : last);
+
+				return name == 'poo' ? Name.random() : name;
+			}
+		}
+
+		var mooshi = Name.random();
+		document.getElementById('name').innerHTML = mooshi.replace('-','');
+
+		responsiveVoice.setDefaultVoice('US English Female');
+		setTimeout(function() {
+			responsiveVoice.speak(mooshi);
+		}, 500);
+
+	</script>
+</html>
